@@ -10,13 +10,16 @@
   "license": "ISC",
   "description": "",
   "devDependencies": {
+    "@rocketseat/eslint-config": "2.2.2",
     "@types/node": "22.13.5",
+    "eslint": "8.57.1",
     "tsx": "4.19.3",
     "typescript": "5.7.3"
   },
   "dependencies": {
     "dotenv": "16.4.7",
     "fastify": "5.2.1",
+    "find-a-friend": "file:",
     "zod": "3.24.2"
   }
 }
