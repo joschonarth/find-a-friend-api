@@ -3,6 +3,8 @@ import crypto from 'node:crypto'
 
 type Overwrite = {
   password?: string
+  latitude?: number
+  longitude?: number
 }
 
 export function makeOrg(overwrite?: Overwrite) {
@@ -20,7 +22,7 @@ export function makeOrg(overwrite?: Overwrite) {
     neighborhood: faker.location.streetAddress(),
     street: faker.location.street(),
 
-    latitude: faker.location.latitude(),
-    longitude: faker.location.longitude(),
+    latitude: overwrite?.latitude ?? faker.location.latitude(),
+    longitude: overwrite?.longitude ?? faker.location.longitude(),
   }
 }
