@@ -16,7 +16,9 @@ export function makePet(overwrite?: Overwrite) {
     id: crypto.randomUUID(),
     name: faker.animal.dog(),
     about: faker.lorem.paragraph(),
-    age: overwrite?.age ?? faker.number.int().toString(),
+    age:
+      overwrite?.age ??
+      faker.helpers.arrayElement(['puppyhood', 'young', 'adult', 'senior']),
     size:
       overwrite?.size ??
       faker.helpers.arrayElement(['small', 'medium', 'large']),
