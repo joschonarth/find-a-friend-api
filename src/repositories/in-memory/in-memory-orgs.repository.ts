@@ -11,11 +11,17 @@ import crypto from 'node:crypto'
 export class InMemoryOrgsRepository implements OrgsRepository {
   public items: Org[] = []
 
+  async findById(id: string): Promise<Org | null> {
+    return this.items.find((org) => org.id === id) || null
+  }
+
   async findByEmail(email: string): Promise<Org | null> {
     return this.items.find((org) => org.email === email) || null
   }
 
   async findManyNearby(params: FindManyNearbyParams) {
+    const MAX_DISTANCE_KM = 10
+
     return this.items.filter((item) => {
       const distance = getDistanceBetweenCoordinates(
         { latitude: params.latitude, longitude: params.longitude },
@@ -25,7 +31,7 @@ export class InMemoryOrgsRepository implements OrgsRepository {
         },
       )
 
-      return distance < 10
+      return distance < MAX_DISTANCE_KM
     })
   }
 
