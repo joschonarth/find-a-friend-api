@@ -1,0 +1,70 @@
+@authToken = {{authenticate.response.body.token}}
+
+### 🏢 Criar Organização
+POST http://localhost:3333/orgs
+content-type: application/json
+
+{
+  "name": "Pet Love",
+  "owner": "John Doe",
+  "email": "john.doe@example.com",
+  "whatsapp": "1234567890",
+  "password": "123456",
+  "cep": "12345-678",
+  "state": "SP",
+  "city": "São Paulo",
+  "neighborhood": "Downtown",
+  "street": "123 Some Street",
+  "latitude": -23.6814346,
+  "longitude": -46.9249675
+}
+
+###
+
+### 🔐 Autenticar Organização
+# @name authenticate
+POST http://localhost:3333/orgs/auth
+content-type: application/json
+
+{
+  "email": "john.doe@example.com",
+  "password": "123456"
+}
+
+###
+
+### 📍 Buscar Organizações Próximas
+GET http://localhost:3333/orgs/nearby?latitude=-23.6814346&longitude=-46.9249675
+
+###
+
+### 🐕 Criar Pet
+# @name pet
+POST http://localhost:3333/orgs/pets
+content-type: application/json
+Authorization: Bearer {{authToken}}
+
+{
+  "name": "Test2",
+  "about": "Friendly and energetic dog looking for a home.",
+  "age": "young",
+  "size": "medium",
+  "species": "dog",
+  "environment": "indoor",
+  "energy_level": "high",
+  "independence_level": "low"
+}
+
+###
+
+@petId = {{pet.response.body.id}}
+
+### 🔍 Buscar Pets
+GET http://localhost:3333/orgs/pets?city=São Paulo
+
+###
+
+### 🦮 Buscar Informações de um Pet
+GET http://localhost:3333/orgs/pets/{{petId}}
+
+###
