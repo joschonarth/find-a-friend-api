@@ -42,7 +42,7 @@
 1. **Clone o repositório:**
 
    ```bash
-   git clone https://github.com/joschonarth/node-find-a-friend.git
+   git clone https://github.com/joschonarth/find-a-friend-api.git
    ```
 
 2. **Crie um arquivo `.env` a partir do exemplo:**
