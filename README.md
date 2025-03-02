@@ -264,6 +264,26 @@
     }
   ```
 
+## 🛠️ Testando as Rotas com REST Client
+
+Para testar as rotas da API diretamente no **VSCode**, você pode utilizar a extensão **REST Client**. Siga os passos abaixo para começar:
+
+### Passos para testar as rotas
+
+1. **Instale a extensão REST Client**:
+   - Abra o **Visual Studio Code**.
+   - Vá para a aba **Extensões** (`Ctrl+Shift+X`).
+   - Pesquise por **REST Client** e clique em **Instalar**.
+
+2. **Abra o arquivo de rotas**:
+   - No projeto, abra o arquivo [routes.http](routes.http), que contém as requisições para testar as rotas da API.
+
+3. **Execute as rotas**:
+   - Clique no botão **Run Request** que aparece acima de cada bloco de requisição para testar as rotas da API.
+   - Veja a resposta da requisição na parte lateral ou inferior da tela.
+
+Com esses passos, você pode testar todas as rotas da API de forma prática e rápida sem sair do VSCode!
+
 ## 🔐 Autenticação
 
 As rotas da API estão protegidas por autenticação **JWT** (JSON Web Token). Para acessar as rotas que requerem autenticação, é necessário obter um token de acesso.
