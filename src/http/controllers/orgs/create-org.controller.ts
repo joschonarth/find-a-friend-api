@@ -27,9 +27,9 @@ export async function createOrgController(
   const createOrgUseCase = makeCreateOrgUseCase()
 
   try {
-    const { org } = await createOrgUseCase.execute(body)
+    await createOrgUseCase.execute(body)
 
-    return reply.status(201).send(org)
+    return reply.status(201).send()
   } catch (error) {
     if (error instanceof OrgAlreadyExistsError) {
       return reply.status(409).send({ message: error.message })

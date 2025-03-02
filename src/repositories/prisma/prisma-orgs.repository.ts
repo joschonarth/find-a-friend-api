@@ -25,7 +25,7 @@ export class PrismaOrgsRepository implements OrgsRepository {
     const MAX_DISTANCE_KM = 10
 
     const gyms = await prisma.$queryRaw<Org[]>`
-    SELECT * from orgs
+    SELECT id, name, owner, email, whatsapp, cep, state, city, neighborhood, street, latitude, longitude FROM orgs
     WHERE ( 6371 * acos( cos( radians(${latitude}) ) * cos( radians( latitude ) ) * cos( radians( longitude ) - radians(${longitude}) ) + sin( radians(${latitude}) ) * sin( radians( latitude ) ) ) ) <= ${MAX_DISTANCE_KM}
   `
 
