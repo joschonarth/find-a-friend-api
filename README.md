@@ -1,6 +1,33 @@
-# 🐶 Find A Friend
+<h1 align="center">🐶 Find A Friend API</h1>
 
-**Find A Friend** é uma plataforma que facilita a adoção de pets, conectando organizações de adoção com pessoas que desejam adotar animais. O sistema permite criar organizações, autenticar-se como uma organização, cadastrar pets, buscar por pets e visualizar detalhes sobre os animais disponíveis para adoção.
+<p align="center"><i>🐾 API que conecta organizações de adoção com pessoas que desejam adotar animais de estimação. 🐾</i>
+  <br/><br/>
+  <img src="https://img.shields.io/github/last-commit/joschonarth/find-a-friend-api?style=default&logo=git&logoColor=white&color=0080ff&labelColor=2f363d" alt="last-commit">
+	<img src="https://img.shields.io/github/languages/top/joschonarth/find-a-friend-api?style=default&color=0080ff&labelColor=2f363d" alt="repo-top-language">
+	<img src="https://img.shields.io/github/languages/count/joschonarth/find-a-friend-api?style=default&color=0080ff&labelColor=2f363d" alt="repo-language-count">
+	<img src="https://img.shields.io/github/license/joschonarth/find-a-friend-api?style=default&color=0080ff&labelColor=2f363d" alt="repo-license">
+  <img src="https://github.com/joschonarth/find-a-friend-api/actions/workflows/run-unit-tests.yml/badge.svg?style=for-the-badge&color=a277ff&labelColor=1C1E26" alt="unit-tests">
+  <img src="https://github.com/joschonarth/find-a-friend-api/actions/workflows/run-e2e-tests.yml/badge.svg?style=for-the-badge&color=a277ff&labelColor=1C1E26" alt="e2e-tests">
+</p>
+
+## 📑 Índice
+
+- [👀 Visão Geral](#-visão-geral)
+- [🛠️ Tecnologias Utilizadas](#️-tecnologias-utilizadas)
+- [⚙️ Funcionalidades](#️-funcionalidades)
+- [🚀 Como Executar o Projeto](#-como-executar-o-projeto)
+- [🔗 Endpoints](#-endpoints)
+- [🔐 Autenticação](#-autenticação)
+- [🧪 Testes](#-testes)
+- [⚙️ GitHub Actions](#️-github-actions)
+- [🤝 Contribuições](#-contribuições)
+- [⭐ Apoie este Projeto](#-apoie-este-projeto)
+- [📝 Licença](#-licença)
+- [📞 Contato](#-contato)
+
+## 👀 Visão Geral
+
+A **Find A Friend API** é uma API RESTful que facilita a adoção de pets, conectando organizações de adoção com pessoas que desejam adotar animais. O sistema permite criar organizações, autenticar-se como uma organização, cadastrar pets, buscar por pets e visualizar detalhes sobre os animais disponíveis para adoção.
 
 ## 🛠️ Tecnologias Utilizadas
 
@@ -37,7 +64,7 @@
 
 - 📱 **Contatar via WhatsApp**: Permite que os adotantes entrem em contato com a organização responsável pelo pet via WhatsApp.
 
-## 🔧 Como Executar o Projeto
+## 🚀 Como Executar o Projeto
 
 1. **Clone o repositório:**
 
@@ -264,26 +291,6 @@
     }
   ```
 
-## 🛠️ Testando as Rotas com REST Client
-
-Para testar as rotas da API diretamente no **VSCode**, você pode utilizar a extensão **REST Client**. Siga os passos abaixo para começar:
-
-### Passos para testar as rotas
-
-1. **Instale a extensão REST Client**:
-   - Abra o **Visual Studio Code**.
-   - Vá para a aba **Extensões** (`Ctrl+Shift+X`).
-   - Pesquise por **REST Client** e clique em **Instalar**.
-
-2. **Abra o arquivo de rotas**:
-   - No projeto, abra o arquivo [routes.http](routes.http), que contém as requisições para testar as rotas da API.
-
-3. **Execute as rotas**:
-   - Clique no botão **Run Request** que aparece acima de cada bloco de requisição para testar as rotas da API.
-   - Veja a resposta da requisição na parte lateral ou inferior da tela.
-
-Com esses passos, você pode testar todas as rotas da API de forma prática e rápida sem sair do VSCode!
-
 ## 🔐 Autenticação
 
 As rotas da API estão protegidas por autenticação **JWT** (JSON Web Token). Para acessar as rotas que requerem autenticação, é necessário obter um token de acesso.
@@ -369,7 +376,11 @@ O projeto utiliza o **GitHub Actions** para automação de testes, garantindo qu
 
 ## 🤝 Contribuições
 
-Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias ou correções. 🚀
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou pull requests com melhorias ou correções. ✨
+
+## ⭐ Apoie este Projeto
+
+Se este projeto te ajudou ou te inspirou de alguma forma, não esqueça de deixar uma ⭐ no repositório! Isso faz toda a diferença! 🚀
 
 ## 📝 Licença
 
