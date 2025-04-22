@@ -45,7 +45,7 @@ content-type: application/json
 Authorization: Bearer {{authToken}}
 
 {
-  "name": "Test2",
+  "name": "Buddy",
   "about": "Friendly and energetic dog looking for a home.",
   "age": "young",
   "size": "medium",
